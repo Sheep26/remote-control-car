@@ -6,6 +6,10 @@ radio.onReceivedValue(function (name, value) {
         if (value == 2) {
             servos.P1.run(speed)
         }
+        if (value == 3) {
+            servos.P0.run(speed)
+            servos.P1.run(speed)
+        }
     }
     if (name == "stopall") {
         servos.P0.run(0)

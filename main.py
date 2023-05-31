@@ -4,6 +4,9 @@ def on_received_value(name, value):
             servos.P0.run(speed)
         if value == 2:
             servos.P1.run(speed)
+        if value == 3:
+            servos.P0.run(speed)
+            servos.P1.run(speed)
     if name == "stopall":
         servos.P0.run(0)
         servos.P1.run(0)
