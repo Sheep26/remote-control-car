@@ -12,20 +12,20 @@ radio.onReceivedValue(function (name, value) {
         }
     }
     if (name == "stopall") {
-        servos.P0.run(0)
-        servos.P1.run(0)
+        servos.P0.stop()
+        servos.P1.stop()
     }
     if (name == "stop") {
         if (value == 1) {
-            servos.P0.run(0)
+            servos.P0.stop()
         }
         if (value == 2) {
-            servos.P1.run(0)
+            servos.P1.stop()
         }
     }
 })
 let speed = 0
-speed = 75
+speed = 100
 radio.setGroup(2)
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
@@ -35,9 +35,9 @@ basic.forever(function () {
         servos.P1.run(speed)
     }
     if (!(input.buttonIsPressed(Button.A))) {
-        servos.P0.run(0)
+        servos.P0.stop()
     }
     if (!(input.buttonIsPressed(Button.B))) {
-        servos.P1.run(0)
+        servos.P1.stop()
     }
 })
