@@ -26,8 +26,8 @@ radio.onReceivedValue(function (name, value) {
 })
 let speed = 0
 speed = 100
-radio.setGroup(2)
 basic.forever(function () {
+    radio.setGroup(2)
     if (input.buttonIsPressed(Button.A)) {
         servos.P0.run(speed)
     }
