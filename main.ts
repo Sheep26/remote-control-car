@@ -4,11 +4,11 @@ radio.onReceivedValue(function (name, value) {
             servos.P0.run(speed)
         }
         if (value == 2) {
-            servos.P1.run(speed)
+            servos.P1.run(0 - speed)
         }
         if (value == 3) {
             servos.P0.run(speed)
-            servos.P1.run(speed)
+            servos.P1.run(0 - speed)
         }
     }
     if (name == "stopall") {
@@ -33,7 +33,7 @@ basic.forever(function () {
             servos.P0.run(speed)
         }
         if (input.buttonIsPressed(Button.B)) {
-            servos.P1.run(speed)
+            servos.P1.run(0 - speed)
         }
         if (!(input.buttonIsPressed(Button.A))) {
             servos.P0.stop()
