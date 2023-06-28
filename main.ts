@@ -1,10 +1,10 @@
 radio.onReceivedValue(function (name, value) {
     if (name == "move") {
         if (value == 1) {
-            servos.P0.run(speed)
+            servos.P1.run(speed)
         }
         if (value == 2) {
-            servos.P1.run(0 - speed)
+            servos.P0.run(0 - speed)
         }
         if (value == 3) {
             servos.P0.run(speed)
