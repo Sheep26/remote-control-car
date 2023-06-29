@@ -26,7 +26,7 @@ def on_forever():
         if input.button_is_pressed(Button.A):
             servos.P0.run(speed)
         if input.button_is_pressed(Button.B):
-            servos.P1.run(-speed)
+            servos.P1.run(0 - speed)
         if not (input.button_is_pressed(Button.A)):
             servos.P0.stop()
         if not (input.button_is_pressed(Button.B)):
