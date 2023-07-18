@@ -25,7 +25,7 @@ radio.onReceivedValue(function (name, value) {
     }
 })
 let speed = 0
-speed = 100
+speed = 125
 basic.forever(function () {
     radio.setGroup(2)
     if (false) {
